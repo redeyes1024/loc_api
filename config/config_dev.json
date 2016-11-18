@@ -1,12 +1,17 @@
 {
-    "partners": {
-        "westworldmedia": {
-            "uri": "http://ypg.cinema-source.com/3.9/",
-            "username": "ypgapi",
-            "password": "@ppl312"
-        }
-    },
-    "db": {
-        "db": "mongodb://localhost/node-template-test"
+  "partners": {
+    "westworldmedia": {
+      "uri": "http://ypg.cinema-source.com/3.9/",
+      "username": "ypgapi",
+      "password": "@ppl312"
     }
+  },
+  "db": {
+    "connectionLimit": 100,
+    "host": "localhost",
+    "user": "root",
+    "password": "root",
+    "database": "loc",
+    "debug": false
+  }
 }
