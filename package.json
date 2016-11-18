@@ -1,0 +1,27 @@
+{
+  "name": "loc_api",
+  "version": "1.0.0",
+  "description": "New LoC api engine.",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redeyes1024/loc_api.git"
+  },
+  "author": "Danil Skripnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redeyes1024/loc_api/issues"
+  },
+  "homepage": "https://github.com/redeyes1024/loc_api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1"
+  }
+}
