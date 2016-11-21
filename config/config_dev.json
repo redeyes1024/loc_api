@@ -4,14 +4,27 @@
       "uri": "http://ypg.cinema-source.com/3.9/",
       "username": "ypgapi",
       "password": "@ppl312"
+    },
+    "dineto": {
+      "uri": "http://singleapp.com/api/",
+      "menuUri": "http://www.dine.to/menus/",
+      "apiKey": "a5178c24805652f576fe27b2bdd157a05969dc6b"
     }
   },
   "db": {
-    "connectionLimit": 100,
-    "host": "localhost",
-    "user": "root",
-    "password": "root",
-    "database": "loc",
-    "debug": false
+    "master": {
+      "host": "loc.local.com",
+      "user": "root",
+      "password": "root",
+      "database": "loc"
+    },
+    "slaves": [
+      {
+        "host": "loc.local.com",
+        "user": "root",
+        "password": "root",
+        "database": "loc"
+      }
+    ]
   }
 }

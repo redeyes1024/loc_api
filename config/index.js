@@ -1,21 +1,10 @@
 'use strict';
 var argv = require('minimist')(process.argv.slice(2));
-var configFile = require(__dirname + '/config.json');
-var configPartnersFile = require(__dirname + '/config-partners.json');
 
 var config = function() {
-    var env = process.env.NODE_ENV || argv.env || "local";
+    var env = process.env.NODE_ENV || argv.env || "dev";
 
-    return configFile[env];
+    return require(`${__dirname}/config_${env}.json`);
 };
 
-var configPartners = function(partner) {
-    var env = process.env.NODE_ENV || argv.env || "local";
-
-    return configPartnersFile[env][partner];
-}
-
-module.exports = {
-    config: config,
-    configPartners: configPartners
-};
+module.exports = config;

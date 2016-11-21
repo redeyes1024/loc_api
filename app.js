@@ -29,10 +29,10 @@ app.use(validator({
         return `${msg} : ${formParam} = ${value}`;
     },
     customValidators: {
-        isIds: function (values, prop) {
+        isIds: function (values) {
             if (Array.isArray(values)) {
                 return values.every(function (val) {
-                    return validator.isNumeric(val.prop);
+                    return (/^(?:[-+]?(?:0|[1-9][0-9]*))$/).test(val);
                 });
             }
             else
@@ -46,6 +46,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 routes(app);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
