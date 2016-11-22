@@ -7,8 +7,12 @@
     },
     "dineto": {
       "uri": "http://singleapp.com/api/",
-      "menuUri": "http://www.dine.to/menus/",
-      "apiKey": "a5178c24805652f576fe27b2bdd157a05969dc6b"
+      "authorization": "Basic a5178c24805652f576fe27b2bdd157a05969dc6b",
+      "user-agent":"YellowPagesCanada/1.11.0"
+    },
+    "dineto-menu": {
+      "uri": "http://www.dine.to/menus/",
+      "authorization": "Basic a5178c24805652f576fe27b2bdd157a05969dc6b"
     }
   },
   "db": {

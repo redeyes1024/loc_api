@@ -1,8 +1,9 @@
 'use strict';
-var users = require('./users');
+var users = require('./user');
 var merchant = require('./merchant');
 module.exports = function(app) {
 
-    app.use('/api/users', users);
+    app.use('/api/user', users);
     app.use('/api/merchant', merchant);
+
 }
