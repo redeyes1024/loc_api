@@ -6,13 +6,15 @@
       "password": "@ppl312"
     },
     "dineto": {
-      "uri": "http://singleapp.com/api/",
-      "authorization": "Basic a5178c24805652f576fe27b2bdd157a05969dc6b",
-      "user-agent":"YellowPagesCanada/1.11.0"
+      "uri": "http://singleapp.com/api/menu.php",
+      "key": "a5178c24805652f576fe27b2bdd157a05969dc6b",
+      "userAgent": "YellowPagesCanada/1.11.0"
     },
-    "dineto-menu": {
-      "uri": "http://www.dine.to/menus/",
-      "authorization": "Basic a5178c24805652f576fe27b2bdd157a05969dc6b"
+    "bookenda": {
+      "uri": "https://www.bookenda.com/api/",
+      "username": "Y9b2HP5sA94z57x57w3cR3x68QkX5ZiE",
+      "password": "161YguMRhVgl94VJ48J8ZZEMCQnfVAYN",
+      "userAgent": "YellowPagesCanada/1.11.0"
     }
   },
   "db": {

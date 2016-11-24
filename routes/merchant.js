@@ -6,8 +6,7 @@
 const _ = require('lodash');
 var route = require('express').Router();
 var merchant = require('../models/merchant');
-
-
+var MultiClients = require('../lib/multi-clients');
 
 route.get('/:merchant_id', function (req, res, next) {
 
@@ -25,8 +24,7 @@ route.get('/:merchant_id', function (req, res, next) {
     // Validate optional parameters
     req.sanitize('page_len').toInt;
     req.sanitize('mobile', true).toBoolean;
-    let options = {
-        "merchant_id": req.params.merchant_id,
+    let filters = {
         "lang": req.query.lang == 'fr' || 'en',
         "mobile": req.query.mobile,
         "page_len": isNaN(req.query.page_len) || 5
@@ -35,7 +33,15 @@ route.get('/:merchant_id', function (req, res, next) {
     // Get DB data
     merchant.getByIds(req.params.merchant_id, null, function (err, rows) {
         if (err) return next(err);
-        res.json(rows);
+        var multiClients = new MultiClients();
+        multiClients.getSummary(filters, rows, function (err, data) {
+            if (err) {
+                var err = new Error(errors);
+                err.status = 400;
+                return next(err);
+            }
+            res.json(data);
+        });
     })
 });
 

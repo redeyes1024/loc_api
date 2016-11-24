@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/redeyes1024/loc_api#readme",
   "dependencies": {
+    "async": "^2.1.4",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-validator": "^2.21.0",
